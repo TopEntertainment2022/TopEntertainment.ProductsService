@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TopEntertainment.Juegos.Application/1.0.0": {
+        "dependencies": {
+          "TopEntertainment.Juegos.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TopEntertainment.Juegos.Application.dll": {}
+        }
+      },
+      "TopEntertainment.Juegos.Domain/1.0.0": {
+        "runtime": {
+          "TopEntertainment.Juegos.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TopEntertainment.Juegos.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TopEntertainment.Juegos.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
