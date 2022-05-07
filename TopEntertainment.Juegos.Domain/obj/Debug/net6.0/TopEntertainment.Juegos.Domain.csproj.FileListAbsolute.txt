@@ -22,3 +22,15 @@ C:\Users\usuario\Desktop\TopEntertainment.Juegos\TopEntertainment.Juegos.Domain\
 C:\Users\usuario\Desktop\TopEntertainment.Juegos\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\refint\TopEntertainment.Juegos.Domain.dll
 C:\Users\usuario\Desktop\TopEntertainment.Juegos\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.pdb
 C:\Users\usuario\Desktop\TopEntertainment.Juegos\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\ref\TopEntertainment.Juegos.Domain.dll
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\bin\Debug\net6.0\TopEntertainment.Juegos.Domain.deps.json
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\bin\Debug\net6.0\TopEntertainment.Juegos.Domain.dll
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\bin\Debug\net6.0\TopEntertainment.Juegos.Domain.pdb
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.csproj.AssemblyReference.cache
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.AssemblyInfoInputs.cache
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.AssemblyInfo.cs
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.dll
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\refint\TopEntertainment.Juegos.Domain.dll
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\TopEntertainment.Juegos.Domain.pdb
+C:\Users\Rodrigo\Desktop\TopEntertainment.ProductsService\TopEntertainment.Juegos.Domain\obj\Debug\net6.0\ref\TopEntertainment.Juegos.Domain.dll

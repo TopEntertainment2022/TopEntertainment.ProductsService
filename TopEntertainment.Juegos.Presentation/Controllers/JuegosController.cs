@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TopEntertainment.Juegos.Application.Services;
+using TopEntertainment.Juegos.Domain.DTOS;
+using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.Presentation.Controllers
 {
@@ -36,9 +38,9 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             {
                 var juegoEntity = _service.GetJuegoById(id);
 
-                if(juegoEntity != null)
+                if (juegoEntity != null)
                 {
-                    return new JsonResult(juegoEntity) { StatusCode = 200};
+                    return new JsonResult(juegoEntity) { StatusCode = 200 };
                 }
 
                 return NotFound();
@@ -48,5 +50,48 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpGet("name/{name}")]
+        public IActionResult GetJuegoByName(string name)
+        {
+            try
+            {
+                var juegoEntity = _service.GetJuegoByName(name);
+
+                if (juegoEntity != null)
+                {
+                    return new JsonResult(juegoEntity) { StatusCode = 200 };
+                }
+
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal server error Rodrigo");
+            }
+        }
+
+
+        [HttpPost]
+        [ProducesResponseType(typeof(JuegoDTO), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult CreateFuncion([FromBody]JuegoDTO juego)
+        {
+            try
+            {
+                 _service.Add(juego);
+                return StatusCode(200, "Juego creado correctamente");
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+
+
+
     }
+
 }

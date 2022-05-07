@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TopEntertainment.Juegos.Domain.Commands;
+using TopEntertainment.Juegos.Domain.DTOS;
 using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.Application.Services
@@ -13,9 +14,10 @@ namespace TopEntertainment.Juegos.Application.Services
         List<Juego> GetAllJuegos();
         Juego GetJuegoById(int id);
         Juego GetJuegoByName(string name);
-        void Add(Juego juego);
+        void Add(JuegoDTO juego);
         void Delete(int id);
         void Update(Juego juego);
+
     }
     public class JuegosService : IJuegosService
     {
@@ -26,9 +28,28 @@ namespace TopEntertainment.Juegos.Application.Services
             _repository = repository;
         }
 
-        public void Add(Juego juego)
+        public void Add(JuegoDTO juego)
         {
-            throw new NotImplementedException();
+            Juego juegoMapeado = new Juego();
+
+            juegoMapeado.NombreProducto = juego.NombreProducto;
+            juegoMapeado.Precio = juego.Precio; 
+            juegoMapeado.Stock = juego.Stock;
+            juegoMapeado.Descripcion = juego.Descripcion;
+            juegoMapeado.EnOferta = juego.EnOferta;
+            juegoMapeado.SoftDelete = juego.SoftDelete;
+            juegoMapeado.Video = juego.Video;
+            juegoMapeado.PlataformaId = juego.PlataformaId;
+            juegoMapeado.ClasificacionId = juego.ClasificacionId;
+
+
+
+
+
+
+
+
+            _repository.Add(juegoMapeado);
         }
 
         public void Delete(int id)
@@ -48,7 +69,7 @@ namespace TopEntertainment.Juegos.Application.Services
 
         public Juego GetJuegoByName(string name)
         {
-            throw new NotImplementedException();
+            return _repository.GetJuegoByName(name);
         }
 
         public void Update(Juego juego)

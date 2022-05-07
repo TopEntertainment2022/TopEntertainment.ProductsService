@@ -18,7 +18,8 @@ namespace TopEntertainment.Juegos.AccessData.Commands
         }
         public void Add(Juego juego)
         {
-            throw new NotImplementedException();
+            _context.Juegos.Add(juego);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
@@ -38,7 +39,7 @@ namespace TopEntertainment.Juegos.AccessData.Commands
 
         public Juego GetJuegoByName(string name)
         {
-            throw new NotImplementedException();
+            return _context.Juegos.SingleOrDefault(Juego => Juego.NombreProducto == name);
         }
 
         public void Update(Juego juego)
