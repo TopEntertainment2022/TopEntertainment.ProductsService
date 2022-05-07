@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TopEntertainment.Juegos.Domain.Commands;
 using TopEntertainment.Juegos.Domain.DTOS;
 using TopEntertainment.Juegos.Domain.Entities;
+using TopEntertainment.Juegos.Domain.Mapper;
 
 namespace TopEntertainment.Juegos.Application.Services
 {
@@ -16,7 +17,7 @@ namespace TopEntertainment.Juegos.Application.Services
         Juego GetJuegoByName(string name);
         void Add(JuegoDTO juego);
         void Delete(int id);
-        void Update(Juego juego);
+        void Update(int id, JuegoDTO juego);
 
     }
     public class JuegosService : IJuegosService
@@ -30,31 +31,13 @@ namespace TopEntertainment.Juegos.Application.Services
 
         public void Add(JuegoDTO juego)
         {
-            Juego juegoMapeado = new Juego();
 
-            juegoMapeado.NombreProducto = juego.NombreProducto;
-            juegoMapeado.Precio = juego.Precio; 
-            juegoMapeado.Stock = juego.Stock;
-            juegoMapeado.Descripcion = juego.Descripcion;
-            juegoMapeado.EnOferta = juego.EnOferta;
-            juegoMapeado.SoftDelete = juego.SoftDelete;
-            juegoMapeado.Video = juego.Video;
-            juegoMapeado.PlataformaId = juego.PlataformaId;
-            juegoMapeado.ClasificacionId = juego.ClasificacionId;
-
-
-
-
-
-
-
-
-            _repository.Add(juegoMapeado);
+            _repository.Add(Mappers.MapperJuego(new Juego(),juego));
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _repository.Delete(id);
         }
 
         public List<Juego> GetAllJuegos()
@@ -72,9 +55,10 @@ namespace TopEntertainment.Juegos.Application.Services
             return _repository.GetJuegoByName(name);
         }
 
-        public void Update(Juego juego)
+        public void Update(int id, JuegoDTO juego)
         {
-            throw new NotImplementedException();
+            Juego juegoEntity = _repository.GetJuegoById(id);
+            _repository.Update(Mappers.MapperJuego(juegoEntity, juego));
         }
     }
 }

@@ -16,6 +16,8 @@ namespace TopEntertainment.Juegos.AccessData.Commands
         {
             _context = context;
         }
+
+
         public void Add(Juego juego)
         {
             _context.Juegos.Add(juego);
@@ -24,7 +26,9 @@ namespace TopEntertainment.Juegos.AccessData.Commands
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Juego juego = _context.Juegos.Find(id);
+            juego.SoftDelete = true;
+            _context.SaveChanges();
         }
 
         public List<Juego> GetAllJuegos()
@@ -44,7 +48,9 @@ namespace TopEntertainment.Juegos.AccessData.Commands
 
         public void Update(Juego juego)
         {
-            throw new NotImplementedException();
+           Juego JuegoEntity =  _context.Juegos.Find(juego.JuegoId);
+                JuegoEntity = juego;
+                _context.SaveChanges(); 
         }
     }
 }

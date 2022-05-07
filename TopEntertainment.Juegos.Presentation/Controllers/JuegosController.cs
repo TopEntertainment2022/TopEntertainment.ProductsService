@@ -90,6 +90,57 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         }
 
 
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult UpdateJuego(int id, [FromBody] JuegoDTO juego)
+        {
+            try
+            {
+                if (juego == null)
+                {
+                    return BadRequest("Error en la información ingresada");
+                }
+
+                var juegoEntity = _service.GetJuegoById(id);
+
+                if (juegoEntity == null)
+                {
+                    return NotFound();
+                }
+
+                _service.Update(id,juego);
+
+                return NoContent();
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+
+        [HttpPut("delete/{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult DeleteJuego(int id)
+        {
+            try
+            {
+                    _service.Delete(id);
+                    return NoContent();  
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+
 
 
     }
