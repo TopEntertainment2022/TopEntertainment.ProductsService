@@ -26,9 +26,9 @@ namespace TopEntertainment.Juegos.AccessData.Commands
 
         public void Delete(int id)
         {
-            //Plataforma plataforma = _context.Plataformas(id);
-            //plataforma.SoftDelete = true;
-            //_context.SaveChanges();
+            var list = _context.Plataformas;
+            list.Remove(GetPlataformaById(id));
+            _context.SaveChanges();
         }
 
         public List<Plataforma> GetAllPlataformas()

@@ -16,9 +16,9 @@ namespace TopEntertainment.Juegos.Application.Services
         Plataforma GetPlataformaById(int id);
         Plataforma GetPlataformaByName(string name);
 
-        void Add(Plataforma plataforma);
+        void Add(PlataformaDTO plataforma);
         void Delete(int id);
-        void Update(Plataforma plataforma);
+        void Update(int id, PlataformaDTO plataforma);
 
     }
     public class PlataformaService : IPlataformaService
@@ -30,10 +30,10 @@ namespace TopEntertainment.Juegos.Application.Services
             _repository = repository;
         }
 
-        public void Add(Plataforma plataforma)
+        public void Add(PlataformaDTO plataforma)
         {
 
-            _repository.Add(plataforma);
+            _repository.Add(Mappers.MapperPlataforma(new Plataforma(),plataforma));
         }
 
         public void Delete(int id)
@@ -56,10 +56,10 @@ namespace TopEntertainment.Juegos.Application.Services
             return _repository.GetPlataformaByName(name);
         }
 
-        public void Update(Plataforma plataforma)
+        public void Update(int id,PlataformaDTO plataforma)
         {
-            Plataforma plataformaEntity = _repository.GetPlataformaById(plataforma.PlataformaId);
-            _repository.Update(plataformaEntity);
+            Plataforma plataformaEntity = _repository.GetPlataformaById(id);
+            _repository.Update(Mappers.MapperPlataforma(plataformaEntity,plataforma));
         }
     }
 }

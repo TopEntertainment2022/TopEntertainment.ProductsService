@@ -7,7 +7,7 @@ using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.Presentation.Controllers
 {
-    [Route("plataforma")]
+    [Route("Plataforma")]
     [ApiController]
     public class PlataformaController : ControllerBase
     {
@@ -31,6 +31,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             catch (Exception){return StatusCode(500, "Internal server error");}
         }
 
+
         [HttpGet("{id}")]
         public IActionResult GetPlataformaById(int id)
         {
@@ -53,16 +54,13 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
 
 
 
-        //Crear y usar plataformaDTO
         [HttpPost]
-        [ProducesResponseType(typeof(Plataforma), StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreatePlataforma([FromBody] Plataforma plataforma)
+        public IActionResult CreatePlataforma([FromBody] PlataformaDTO plataforma)
         {
             try
             {
                 _service.Add(plataforma);
-                return StatusCode(200, "Juego creado correctamente");
+                return StatusCode(201, "Plataforma creado correctamente");
 
             }
             catch (Exception e)
@@ -72,55 +70,52 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         }
 
 
-        //[HttpPut("{id}")]
-        //[ProducesResponseType(StatusCodes.Status204NoContent)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status404NotFound)]
-        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        //public IActionResult UpdatePlataforma(int id, [FromBody] Plataforma plataforma)
-        //{
-        //    //try
-        //    //{
-        //    //    if (juego == null)
-        //    //    {
-        //    //        return BadRequest("Error en la información ingresada");
-        //    //    }
+        [HttpPut("{id}")]
+        public IActionResult UpdatePlataforma(int id, [FromBody] PlataformaDTO plataforma)
+        {
+            try
+            {
+                if (plataforma == null)
+                {
+                    return BadRequest("Error en la información ingresada");
+                }
 
-        //    //    var juegoEntity = _service.GetJuegoById(id);
+                var plataformaEntity = _service.GetPlataformaById(id);
 
-        //    //    if (juegoEntity == null)
-        //    //    {
-        //    //        return NotFound();
-        //    //    }
+                if (plataformaEntity == null)
+                {
+                    return NotFound();
+                }
 
-        //    //    _service.Update(id, juego);
+                _service.Update(id, plataforma);
 
-        //    //    return NoContent();
-        //    //}
-        //    //catch (Exception)
-        //    //{
-        //    //    return StatusCode(500, "Internal server error");
-        //    //}
-        //}
+                return StatusCode(200, "Plataforma Actualizada");
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
 
 
-        //[HttpPut("delete/{id}")]
-        //[ProducesResponseType(StatusCodes.Status204NoContent)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status404NotFound)]
-        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        //public IActionResult DeletePlataforma(int id)
-        //{
-        //    //try
-        //    //{
-        //    //    _service.Delete(id);
-        //    //    return NoContent();
-        //    //}
-        //    //catch (Exception)
-        //    //{
-        //    //    return StatusCode(500, "Internal server error");
-        //    //}
-        //}
+        [HttpDelete("{id}")]
+        public IActionResult DeletePlataforma(int id)
+        {
+            try
+            {
+                var plataformaEntity = _service.GetPlataformaById(id);
+                if (plataformaEntity.Juegos.Count == 0) { return BadRequest(); }
+                else 
+                { 
+                _service.Delete(id);
+                return StatusCode(200, "Plataforma Eliminada");
+                }
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
 
 
 

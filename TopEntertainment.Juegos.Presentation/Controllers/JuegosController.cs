@@ -17,6 +17,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             _service = service;
         }
 
+
         [HttpGet]
         public IActionResult GetAllJuegos()
         {
@@ -24,12 +25,9 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             {
                 return new JsonResult(_service.GetAllJuegos()) { StatusCode = 200 };
             }
-            catch (Exception)
-            {
-
-                return StatusCode(500, "Internal server error");
-            }
+            catch (Exception) { return StatusCode(500, "Internal server error"); }
         }
+
 
         [HttpGet("{id}")]
         public IActionResult GetJuegoById(int id)
@@ -45,11 +43,9 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
 
                 return NotFound();
             }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internal server error");
-            }
+            catch (Exception) { return StatusCode(500, "Internal server error"); }
         }
+
 
         [HttpGet("name/{name}")]
         public IActionResult GetJuegoByName(string name)
@@ -65,36 +61,26 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
 
                 return NotFound();
             }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internal server error Rodrigo");
-            }
+            catch (Exception) { return StatusCode(500, "Internal server error"); }
         }
 
 
         [HttpPost]
-        [ProducesResponseType(typeof(JuegoDTO), StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult CreateFuncion([FromBody]JuegoDTO juego)
+        public IActionResult CreateJuego([FromBody]JuegoDTO juego)
         {
             try
             {
                  _service.Add(juego);
                 return StatusCode(200, "Juego creado correctamente");
+            }
 
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
+            catch (Exception e) { return BadRequest(e.Message);}
+
         }
 
 
+
         [HttpPut("{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult UpdateJuego(int id, [FromBody] JuegoDTO juego)
         {
             try
@@ -113,31 +99,21 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
 
                 _service.Update(id,juego);
 
-                return NoContent();
+                return StatusCode(200, "Juego Actualizado");
             }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internal server error");
-            }
+            catch (Exception) { return StatusCode(500, "Internal server error"); }
         }
 
 
         [HttpPut("delete/{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult DeleteJuego(int id)
         {
             try
             {
                     _service.Delete(id);
-                    return NoContent();  
+                    return StatusCode(200, "Juego Eliminado");
             }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internal server error");
-            }
+            catch (Exception){ return StatusCode(500, "Internal server error");}
         }
 
 
