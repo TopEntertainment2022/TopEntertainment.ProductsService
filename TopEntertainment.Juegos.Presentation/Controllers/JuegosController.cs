@@ -105,7 +105,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         }
 
 
-        [HttpPut("delete/{id}")]
+        [HttpDelete("delete/{id}")]
         public IActionResult DeleteJuego(int id)
         {
             try
