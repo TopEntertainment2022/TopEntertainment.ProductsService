@@ -16,14 +16,19 @@ namespace TopEntertainment.Juegos.AccessData.Commands
         {
             _context = context;
         }
+
+
         public void Add(Juego juego)
         {
-            throw new NotImplementedException();
+            _context.Juegos.Add(juego);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Juego juego = _context.Juegos.Find(id);
+            juego.SoftDelete = true;
+            _context.SaveChanges();
         }
 
         public List<Juego> GetAllJuegos()
@@ -38,12 +43,14 @@ namespace TopEntertainment.Juegos.AccessData.Commands
 
         public Juego GetJuegoByName(string name)
         {
-            throw new NotImplementedException();
+            return _context.Juegos.SingleOrDefault(Juego => Juego.NombreProducto == name);
         }
 
         public void Update(Juego juego)
         {
-            throw new NotImplementedException();
+           Juego JuegoEntity =  _context.Juegos.Find(juego.JuegoId);
+                JuegoEntity = juego;
+                _context.SaveChanges(); 
         }
     }
 }
