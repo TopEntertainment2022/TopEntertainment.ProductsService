@@ -11,6 +11,7 @@ namespace TopEntertainment.Juegos.Domain.Commands
         void Add(Plataforma plataforma);
         void Delete(int id);
         void Update(Plataforma plataforma);
+        public bool PlataformaIsEmpty(int id);
 
     }
 }

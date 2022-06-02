@@ -20,19 +20,13 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
 
 
         [HttpPost]
-
-        //Validar categorias, clasificacion
-        //getById = mostrar eliminados?
-        //segurizar add/update/delete
-        //revisar codigos de respuestas y json results
-        //agregar imagenes
         public IActionResult CreateJuego([FromBody] JuegoDTO2 juego)
         {
             try
             {
-                if (juego == null || _servicePlataforma.GetPlataformaById(juego.PlataformaId) == null)
+                if (juego == null || !_service.ValidarPlataforma(juego.PlataformaId) || !_service.ValidarClasificacion(juego.ClasificacionId) || !_service.ValidarCategorias(juego.Categorias))
                 {
-                    return BadRequest();
+                    return StatusCode(400, new RespuestaDTO("La plataforma, clasificacion y/o categoria/s ingresadas no existen "));
                 }
                 else
                 {
@@ -40,10 +34,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
                     return StatusCode(201);
                 }
             }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
+            catch (Exception e) { return StatusCode(500, e.Message); }
         }
 
 
@@ -53,26 +44,21 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         {
             try
             {
-                if (juego == null || _servicePlataforma.GetPlataformaById(juego.PlataformaId) == null)
+                if (!_service.ValidarJuego(id)) return NotFound();
+
+                if (juego == null || !_service.ValidarPlataforma(juego.PlataformaId) || !_service.ValidarClasificacion(juego.ClasificacionId) || !_service.ValidarCategorias(juego.Categorias))
                 {
-                    return BadRequest("Error en la información ingresada");
+                    return StatusCode(400, new RespuestaDTO("La plataforma, clasificacion y/o categoria/s ingresadas no existen "));
                 }
                 else
                 {
 
-                    if (_service.GetJuegoById(id) == null)
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        _service.Update(id, juego);
+                    _service.Update(id, juego);
 
-                        return StatusCode(201);
-                    }
+                    return StatusCode(201);
                 }
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
@@ -81,14 +67,12 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         {
             try
             {
-                if (_service.GetJuegoById(id) == null) { return NotFound(); }
-                else
-                {
-                    _service.Delete(id);
-                    return StatusCode(200);
-                }
+                if (!_service.ValidarJuego(id)) return NotFound();
+
+                _service.Delete(id);
+                return StatusCode(200);
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
@@ -99,7 +83,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             {
                 return new JsonResult(_service.GetAllJuegos()) { StatusCode = 200 };
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
@@ -108,18 +92,47 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         {
             try
             {
-                var plataforma = _service.GetJuegoById(id);
+                if (!_service.ValidarJuego(id)) return NotFound();
 
-                if (plataforma != null)
-                {
-                    return new JsonResult(plataforma) { StatusCode = 200 };
-                }
-                else
-                {
-                    return NotFound();
-                }
+                var juego = _service.GetJuegoById(id);
+                return new JsonResult(juego) { StatusCode = 200 };
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
+        }
+
+        [HttpGet("plataforma/{id}")]
+        public IActionResult GetJuegosByPlataformaId(int id)
+        {
+
+            try
+            {
+                if (!_service.ValidarPlataforma(id)) return StatusCode(404, new RespuestaDTO("La plataforma ingresada no existe "));
+
+                else return new JsonResult(_service.GetJuegosByPlataformaId(id)) { StatusCode = 200 };
+            }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
+        }
+
+        [HttpGet("categoria/{id}")]
+        public IActionResult GetJuegosByCategoriaId(int id)
+        {
+            try
+            {
+                if (!_service.ValidarCategoria(id)) return StatusCode(404, new RespuestaDTO("La categoria ingresada no existe "));
+                return new JsonResult(_service.GetJuegosByCategoriaId(id)) { StatusCode = 200 };
+            }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
+        }
+
+        [HttpGet("clasificacion/{id}")]
+        public IActionResult GetJuegosByClasificacionId(int id)
+        {
+            try
+            {
+                if (!_service.ValidarClasificacion(id)) return StatusCode(404, new RespuestaDTO("La clasificacion ingresada no existe "));
+                return new JsonResult(_service.GetJuegosByClasificacionId(id)) { StatusCode = 200 };
+            }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 

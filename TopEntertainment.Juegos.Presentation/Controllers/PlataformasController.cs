@@ -8,14 +8,15 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
     [Route("Plataforma")]
     [ApiController]
 
-    //Cuando la plataforma tenga juegos asociados avisar que no se puede eliminar
     public class PlataformaController : ControllerBase
     {
         private readonly IPlataformaService _service;
+        private readonly IJuegosService _juegosService;
 
-        public PlataformaController(IPlataformaService service)
+        public PlataformaController(IPlataformaService service, IJuegosService juegosService)
         {
             _service = service;
+            _juegosService = juegosService;
         }
 
 
@@ -34,7 +35,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
                     return StatusCode(201);
                 }
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
@@ -45,12 +46,12 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             {
                 if (plataforma == null)
                 {
-                    return BadRequest("Error en la información ingresada");
+                    return BadRequest();
                 }
                 else
                 {
 
-                    if (_service.GetPlataformaById(id) == null)
+                    if (!_juegosService.ValidarPlataforma(id))
                     {
                         return NotFound();
                     }
@@ -58,11 +59,11 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
                     {
                         _service.Update(id, plataforma);
 
-                        return StatusCode(201, "Plataforma Actualizada");
+                        return StatusCode(201);
                     }
                 }
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
@@ -71,14 +72,19 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         {
             try
             {
-                if (_service.GetPlataformaById(id) == null) { return NotFound(); }
+                if (!_juegosService.ValidarPlataforma(id)) { return NotFound(); }
                 else
                 {
-                    _service.Delete(id);
-                    return StatusCode(200, "Plataforma Eliminada");
+                    if (_service.PlataformaIsEmpty(id))
+                    {
+                        _service.Delete(id);
+                        return StatusCode(200);
+                    }
+                    else return StatusCode(400, new RespuestaDTO("La plataforma no se puede eliminar porque tiene juegos asociados"));
                 }
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
@@ -91,7 +97,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
                 return new JsonResult(_service.GetAllPlataformas()) { StatusCode = 200 };
             }
 
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
@@ -100,18 +106,14 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         {
             try
             {
-                var plataforma = _service.GetPlataformaById(id);
-
-                if (plataforma != null)
+                if (_juegosService.ValidarPlataforma(id))
                 {
+                    var plataforma = _service.GetPlataformaById(id);
                     return new JsonResult(plataforma) { StatusCode = 200 };
                 }
-                else
-                {
-                    return NotFound();
-                }
+                else return NotFound();
             }
-            catch (Exception) { return StatusCode(500, "Internal server error"); }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 

@@ -12,6 +12,7 @@
         public int PlataformaId { get; set; }
         public int ClasificacionId { get; set; }
         public List<int> Categorias { get; set; }
+        public List<string> Imagenes { get; set; }
 
     }
 }

@@ -2168,24 +2168,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rodrigo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Awakening.-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Presentation\\TopEntertainment.Juegos.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Presentation\\TopEntertainment.Juegos.Presentation.csproj",
       "projectName": "TopEntertainment.Juegos.Presentation",
-      "projectPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Presentation\\TopEntertainment.Juegos.Presentation.csproj",
-      "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Presentation\\obj\\",
+      "projectPath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Presentation\\TopEntertainment.Juegos.Presentation.csproj",
+      "packagesPath": "C:\\Users\\Awakening.-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Presentation\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Awakening.-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2199,11 +2194,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj": {
-              "projectPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj"
+            "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj": {
+              "projectPath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj"
             },
-            "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj": {
-              "projectPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj"
+            "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj": {
+              "projectPath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj"
             }
           }
         }
@@ -2261,7 +2256,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

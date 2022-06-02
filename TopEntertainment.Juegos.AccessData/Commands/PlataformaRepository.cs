@@ -48,6 +48,13 @@ namespace TopEntertainment.Juegos.AccessData.Commands
             _context.SaveChanges();
         }
 
+        public bool PlataformaIsEmpty(int id)
+        {
+            var Juegos = _context.Juegos.Where(juego => juego.PlataformaId == id).ToList();
+            if (Juegos.Count == 0) { return true; }
+            else return false;
+        }
+
     }
 
 }

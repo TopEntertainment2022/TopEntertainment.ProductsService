@@ -13,6 +13,7 @@ namespace TopEntertainment.Juegos.Application.Services
         void Add(PlataformaDTO plataforma);
         void Delete(int id);
         void Update(int id, PlataformaDTO plataforma);
+        public bool PlataformaIsEmpty(int id);
 
     }
     public class PlataformaService : IPlataformaService
@@ -57,6 +58,11 @@ namespace TopEntertainment.Juegos.Application.Services
         {
             Plataforma plataformaEntity = _repository.GetPlataformaById(id);
             _repository.Update(Mappers.MapperPlataforma(plataformaEntity, plataforma));
+        }
+
+        public bool PlataformaIsEmpty(int id)
+        {
+            return _repository.PlataformaIsEmpty(id);
         }
     }
 }
