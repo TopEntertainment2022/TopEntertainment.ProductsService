@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TopEntertainment.Juegos.Domain.DTOS;
-using TopEntertainment.Juegos.Application;
 using TopEntertainment.Juegos.Application.Services;
+using TopEntertainment.Juegos.Domain.DTOS;
 
 namespace TopEntertainment.Juegos.Presentation.Controllers
 {
@@ -25,42 +24,27 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
         {
             try
             {
-                if (clasificacion == null)
-                {
-                    return BadRequest();
-                }
-                else
-                {
-                    _service.Add(clasificacion);
-                    return StatusCode(201);
-                }
+                if (clasificacion == null) { return BadRequest(); }
+
+                _service.Add(clasificacion);
+                return StatusCode(201);
             }
             catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
 
         [HttpPut("{id}")]
-        public IActionResult UpdateClasificacion(int id, [FromBody] ClasificacionDTO plataforma)
+        public IActionResult UpdateClasificacion(int id, [FromBody] ClasificacionDTO clasificacion)
         {
             try
             {
-                if (plataforma == null)
-                {
-                    return BadRequest();
-                }
+                if (clasificacion == null) { return BadRequest(); }
                 else
                 {
+                    if (!_juegosService.ValidarClasificacion(id)) { return NotFound(); }
 
-                    if (!_juegosService.ValidarClasificacion(id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        _service.Update(id, plataforma);
-
-                        return StatusCode(201);
-                    }
+                    _service.Update(id, clasificacion);
+                    return StatusCode(201);
                 }
             }
             catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
@@ -80,7 +64,7 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
                         _service.Delete(id);
                         return StatusCode(200);
                     }
-                    else return StatusCode(400, new RespuestaDTO("La Clasificacion no se puede eliminar "));
+                    else return StatusCode(400, new RespuestaDTO("La Clasificación no se puede eliminar porque tiene juegos asociados."));
                 }
             }
 

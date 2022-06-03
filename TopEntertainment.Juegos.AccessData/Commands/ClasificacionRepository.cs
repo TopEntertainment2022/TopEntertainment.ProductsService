@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TopEntertainment.Juegos.Domain.Commands;
+﻿using TopEntertainment.Juegos.Domain.Commands;
 using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.AccessData.Commands
