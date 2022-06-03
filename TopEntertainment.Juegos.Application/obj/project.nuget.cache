@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "dYtH5jsSAk+MCMR98S98D5nMfG8UPy6c4TEYAMDgjW5AQ8yKFD0eY0mHZEtoTwVFJDB8E9hmrBNaYFUdQ06Uvg==",
+  "dgSpecHash": "NBAKRKS//3Qrsr3LD9FuOHjq+4zw6V3204+Cqgg7trvwrRxIpHrRMHWhp9LssmInQPeOC+i9UhNpygkh2mrkJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
+  "projectFilePath": "C:\\Users\\Rayan\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Rayan\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\Rayan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Rayan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Rayan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Rayan\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Rayan\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Rayan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

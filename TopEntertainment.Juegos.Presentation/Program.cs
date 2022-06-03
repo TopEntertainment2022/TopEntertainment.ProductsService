@@ -22,6 +22,9 @@ builder.Services.AddTransient<IJuegosService, JuegosService>();
 builder.Services.AddTransient<IPlataformaRepository, PlataformaRepository>();
 builder.Services.AddTransient<IPlataformaService, PlataformaService>();
 
+builder.Services.AddTransient<IClasificacionRepository, ClasificacionRepository>();
+builder.Services.AddTransient<IClasificacionService, ClasificacionService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

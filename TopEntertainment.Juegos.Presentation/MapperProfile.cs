@@ -15,6 +15,10 @@ namespace TopEntertainment.Juegos.Presentation
             CreateMap<PlataformaDTO, Plataforma>();
             CreateMap<PlataformaDTO2, Plataforma>();
             CreateMap<Plataforma, PlataformaDTO2>();
+
+            CreateMap<ClasificacionDTO, Clasificacion>();
+            CreateMap<ClasificacionDTO2, Clasificacion>();
+            CreateMap<Clasificacion, ClasificacionDTO2>();
         }
     }
 }

@@ -26,5 +26,14 @@ namespace TopEntertainment.Juegos.Domain.Mapper
             PlataformaEntity.NombrePlataforma = plataforma.NombrePlataforma;
             return PlataformaEntity;
         }
+
+
+
+        public static Clasificacion MapperClasificacion(Clasificacion clasificacionEntity, ClasificacionDTO clasificacion)
+        {
+            clasificacionEntity.Descripcion = clasificacion.Descripcion;
+            clasificacionEntity.NombreClasificacion = clasificacion.NombreClasificacion;
+            return clasificacionEntity;
+        }
     }
 }

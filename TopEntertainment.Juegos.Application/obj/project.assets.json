@@ -308,19 +308,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Awakening.-\\.nuget\\packages\\": {}
+    "C:\\Users\\Rayan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Rayan\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
       "projectName": "TopEntertainment.Juegos.Application",
-      "projectPath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
-      "packagesPath": "C:\\Users\\Awakening.-\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\obj\\",
+      "projectPath": "C:\\Users\\Rayan\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
+      "packagesPath": "C:\\Users\\Rayan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rayan\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Awakening.-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rayan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -334,8 +334,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
-              "projectPath": "C:\\Users\\Awakening.-\\Desktop\\asd\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj"
+            "C:\\Users\\Rayan\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
+              "projectPath": "C:\\Users\\Rayan\\Desktop\\TopEntertainment.ProductsService-ft-59\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj"
             }
           }
         }
@@ -370,7 +370,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
