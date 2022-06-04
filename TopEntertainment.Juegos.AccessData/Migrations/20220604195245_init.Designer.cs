@@ -11,7 +11,7 @@ using TopEntertainment.Juegos.AccessData;
 namespace TopEntertainment.Juegos.AccessData.Migrations
 {
     [DbContext(typeof(JuegosContext))]
-    [Migration("20220506052031_init")]
+    [Migration("20220604195245_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

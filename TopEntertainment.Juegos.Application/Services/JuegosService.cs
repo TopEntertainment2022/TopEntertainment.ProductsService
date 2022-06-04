@@ -1,38 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
 using TopEntertainment.Juegos.Domain.Commands;
 using TopEntertainment.Juegos.Domain.DTOS;
 using TopEntertainment.Juegos.Domain.Entities;
-using TopEntertainment.Juegos.Domain.Mapper;
 
 namespace TopEntertainment.Juegos.Application.Services
 {
     public interface IJuegosService
     {
-        List<Juego> GetAllJuegos();
-        Juego GetJuegoById(int id);
-        Juego GetJuegoByName(string name);
-        void Add(JuegoDTO juego);
+        List<JuegoDTO> GetAllJuegos();
+        JuegoDTO GetJuegoById(int id);
+        void Add(JuegoDTO2 juego);
         void Delete(int id);
-        void Update(int id, JuegoDTO juego);
+        void Update(int id, JuegoDTO2 juego);
+        List<JuegoDTO> GetJuegosByPlataformaId(int id);
+        List<JuegoDTO> GetJuegosByCategoriaId(int id);
+        List<JuegoDTO> GetJuegosByClasificacionId(int id);
+        public bool ValidarPlataforma(int id);
+        public bool ValidarClasificacion(int id);
+
+        public bool ValidarCategorias(List<int>? lista);
+        public bool ValidarCategoria(int id);
+
+        public bool ValidarJuego(int id);
 
     }
     public class JuegosService : IJuegosService
     {
         private readonly IJuegosRepository _repository;
+        private readonly IMapper _mapper;
 
-        public JuegosService(IJuegosRepository repository)
+        public JuegosService(IJuegosRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
-        public void Add(JuegoDTO juego)
+        public void Add(JuegoDTO2 juego)
         {
+            _repository.Add(_mapper.Map<Juego>(juego), juego.Categorias, juego.Imagenes);
+        }
 
-            _repository.Add(Mappers.MapperJuego(new Juego(),juego));
+        public void Update(int id, JuegoDTO2 juego)
+        {
+            var juegoEntity = _mapper.Map<Juego>(juego);
+            juegoEntity.JuegoId = id;
+            _repository.Update(id, juegoEntity, juego.Categorias, juego.Imagenes);
         }
 
         public void Delete(int id)
@@ -40,25 +52,73 @@ namespace TopEntertainment.Juegos.Application.Services
             _repository.Delete(id);
         }
 
-        public List<Juego> GetAllJuegos()
+        public List<JuegoDTO> GetAllJuegos()
         {
-            return _repository.GetAllJuegos();
+            var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetAllJuegos());
+            mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
+            mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
+            return mappedJuegos;
         }
 
-        public Juego GetJuegoById(int id)
+        public JuegoDTO GetJuegoById(int id)
         {
-            return _repository.GetJuegoById(id);
+            var juegoDTO = _mapper.Map<JuegoDTO>(_repository.GetJuegoById(id));
+            juegoDTO.Categorias = _repository.GetCategoriasByJuegoId(juegoDTO.JuegoId);
+            juegoDTO.Imagenes = _repository.GetImagenesByJuegoId(juegoDTO.JuegoId);
+            return juegoDTO;
         }
 
-        public Juego GetJuegoByName(string name)
+        public List<JuegoDTO> GetJuegosByPlataformaId(int id)
         {
-            return _repository.GetJuegoByName(name);
+            var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetJuegosByPlataformaId(id));
+            mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
+            mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
+            return mappedJuegos;
         }
 
-        public void Update(int id, JuegoDTO juego)
+        public List<JuegoDTO> GetJuegosByCategoriaId(int id)
         {
-            Juego juegoEntity = _repository.GetJuegoById(id);
-            _repository.Update(Mappers.MapperJuego(juegoEntity, juego));
+            var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetJuegosByCategoriaId(id));
+            mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
+            mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
+            return mappedJuegos;
+        }
+
+        public List<JuegoDTO> GetJuegosByClasificacionId(int id)
+        {
+            var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetJuegosByClasificacionId(id));
+            mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
+            mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
+            return mappedJuegos;
+        }
+
+        public bool ValidarPlataforma(int id)
+        {
+            return _repository.ValidarPlataforma(id);
+        }
+
+        public bool ValidarClasificacion(int id)
+        {
+            return _repository.ValidarClasificacion(id);
+        }
+
+        public bool ValidarCategorias(List<int>? lista)
+        {
+            foreach (int c in lista)
+            {
+                if (!_repository.ValidarCategoria(c)) return false;
+            }
+            return true;
+        }
+
+        public bool ValidarCategoria(int id)
+        {
+            return _repository.ValidarCategoria(id);
+        }
+
+        public bool ValidarJuego(int id)
+        {
+            return _repository.ValidarJuego(id);
         }
     }
 }

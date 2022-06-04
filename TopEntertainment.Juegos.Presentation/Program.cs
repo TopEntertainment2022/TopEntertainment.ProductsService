@@ -14,12 +14,16 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddDbContext<JuegosContext>(x => x.UseSqlServer(connectionString));
 builder.Services.AddTransient<IJuegosRepository, JuegosRepository>();
 builder.Services.AddTransient<IJuegosService, JuegosService>();
 
 builder.Services.AddTransient<IPlataformaRepository, PlataformaRepository>();
 builder.Services.AddTransient<IPlataformaService, PlataformaService>();
+
+builder.Services.AddTransient<IClasificacionRepository, ClasificacionRepository>();
+builder.Services.AddTransient<IClasificacionService, ClasificacionService>();
 
 var app = builder.Build();
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TopEntertainment.Juegos.Domain.Entities;
+﻿using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.Domain.Commands
 {
@@ -16,6 +11,7 @@ namespace TopEntertainment.Juegos.Domain.Commands
         void Add(Plataforma plataforma);
         void Delete(int id);
         void Update(Plataforma plataforma);
+        public bool PlataformaIsEmpty(int id);
 
     }
 }

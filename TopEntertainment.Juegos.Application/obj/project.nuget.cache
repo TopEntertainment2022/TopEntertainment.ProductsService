@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "mUOmGlJFdp559GAseDAjeVxdLb6Rjt38hRHb9EVp3hX08X8Em5qWcQ9pYVhQgp3RV8Y2hb8ACVsbO48Azf0nsA==",
+  "dgSpecHash": "AzwXx2ZrUsUlq9snJxA2zZFwkBEAMyQLa1eOxuIWoODr97woeHuJDPha9tEXUA8AI9+q6ytbXsPM0SVEoJ8HWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Jose Luis\\Google Drive\\Doc-Universidad\\Proyecto Software\\TopEntertainment\\Rama DEV\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jose Luis\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Luis\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Luis\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Jose Luis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Luis\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Luis\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Luis\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

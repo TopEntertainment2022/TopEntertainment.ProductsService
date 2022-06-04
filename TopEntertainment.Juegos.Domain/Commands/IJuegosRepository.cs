@@ -1,19 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TopEntertainment.Juegos.Domain.Entities;
+﻿using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.Domain.Commands
 {
     public interface IJuegosRepository
     {
+        void Add(Juego juego, List<int> categorias, List<string> Imagenes);
+        void Update(int id, Juego juego, List<int> categorias, List<string> Imagenes);
+        void Delete(int id);
         List<Juego> GetAllJuegos();
         Juego GetJuegoById(int id);
-        Juego GetJuegoByName(string name);
-        void Add(Juego juego);
-        void Delete(int id);
-        void Update(Juego juego);
+        List<int> GetCategoriasByJuegoId(int id);
+        void AddCategoria(ProductoCategoria categoria);
+        void AddCategorias(int id, List<int> categorias);
+        public void DeleteCategorias(int juegoID);
+        public List<string> GetImagenesByJuegoId(int id);
+        public List<Juego> GetJuegosByPlataformaId(int id);
+
+        public List<Juego> GetJuegosByCategoriaId(int id);
+
+        public List<Juego> GetJuegosByClasificacionId(int id);
+
+        public bool ValidarPlataforma(int id);
+
+        public bool ValidarClasificacion(int id);
+
+        public bool ValidarCategoria(int categoria);
+
+        public bool ValidarJuego(int id);
     }
 }

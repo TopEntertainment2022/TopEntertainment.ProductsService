@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.AccessData
@@ -131,13 +126,13 @@ namespace TopEntertainment.Juegos.AccessData
             //INSERTS
 
             modelBuilder.Entity<Categoria>().HasData(
-                new Categoria 
-                { 
+                new Categoria
+                {
                     CategoriaId = 1,
                     NombreCategoria = "Platformer",
                     Descripcion = "Juegos de plataforma y aventuras."
                 },
-                
+
                 new Categoria
                 {
                     CategoriaId = 2,
@@ -170,7 +165,7 @@ namespace TopEntertainment.Juegos.AccessData
             );
 
             modelBuilder.Entity<Plataforma>().HasData(
-                
+
                 new Plataforma
                 {
                     PlataformaId = 1,
@@ -228,7 +223,7 @@ namespace TopEntertainment.Juegos.AccessData
 
                 new ProductoCategoria
                 {
-                    Id=2,
+                    Id = 2,
                     JuegoId = 2,
                     CategoriaId = 1
                 }
@@ -239,13 +234,13 @@ namespace TopEntertainment.Juegos.AccessData
                 new Imagen
                 {
                     ImagenId = 1,
-                    JuegoId= 1,
+                    JuegoId = 1,
                     ImagenUrl = "https://i.imgur.com/4Hk05rT.png"
                 },
 
                 new Imagen
                 {
-                    ImagenId= 2,
+                    ImagenId = 2,
                     JuegoId = 2,
                     ImagenUrl = "https://i.imgur.com/86iraFT.png"
                 }

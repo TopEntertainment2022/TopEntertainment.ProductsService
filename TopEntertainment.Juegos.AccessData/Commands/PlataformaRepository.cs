@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TopEntertainment.Juegos.Domain.Commands;
+﻿using TopEntertainment.Juegos.Domain.Commands;
 using TopEntertainment.Juegos.Domain.Entities;
 
 namespace TopEntertainment.Juegos.AccessData.Commands
@@ -52,7 +47,14 @@ namespace TopEntertainment.Juegos.AccessData.Commands
             plataformaEntity = plataforma;
             _context.SaveChanges();
         }
-    
+
+        public bool PlataformaIsEmpty(int id)
+        {
+            var Juegos = _context.Juegos.Where(juego => juego.PlataformaId == id).ToList();
+            if (Juegos.Count == 0) { return true; }
+            else return false;
+        }
+
     }
 
 }

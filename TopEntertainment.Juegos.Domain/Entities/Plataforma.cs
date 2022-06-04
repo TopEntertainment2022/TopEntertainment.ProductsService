@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TopEntertainment.Juegos.Domain.Entities
+﻿namespace TopEntertainment.Juegos.Domain.Entities
 {
     public class Plataforma
     {

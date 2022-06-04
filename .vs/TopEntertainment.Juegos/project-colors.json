@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1fabc8d9-751e-45a7-97f9-c6c8ddf5e8cf": {
+      "ProjectGuid": "1fabc8d9-751e-45a7-97f9-c6c8ddf5e8cf",
+      "DisplayName": "TopEntertainment.Juegos.Presentation",
+      "ColorIndex": 0
+    },
+    "2f86de12-2c2e-4558-af93-e28fb0550c6d": {
+      "ProjectGuid": "2f86de12-2c2e-4558-af93-e28fb0550c6d",
+      "DisplayName": "TopEntertainment.Juegos.AccessData",
+      "ColorIndex": 1
+    },
+    "ae8a6eb0-d861-4804-9dec-8ac238c24c6b": {
+      "ProjectGuid": "ae8a6eb0-d861-4804-9dec-8ac238c24c6b",
+      "DisplayName": "TopEntertainment.Juegos.Application",
+      "ColorIndex": 2
+    },
+    "2d0eb368-e6ca-4e4e-9e93-10b7cb0bd6d7": {
+      "ProjectGuid": "2d0eb368-e6ca-4e4e-9e93-10b7cb0bd6d7",
+      "DisplayName": "TopEntertainment.Juegos.Domain",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
