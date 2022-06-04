@@ -17,6 +17,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<JuegosContext>(x => x.UseSqlServer(connectionString));
 builder.Services.AddTransient<IJuegosRepository, JuegosRepository>();
 builder.Services.AddTransient<IJuegosService, JuegosService>();
+
+builder.Services.AddTransient<IPlataformaRepository, PlataformaRepository>();
+builder.Services.AddTransient<IPlataformaService, PlataformaService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
