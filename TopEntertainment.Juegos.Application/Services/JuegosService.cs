@@ -7,7 +7,7 @@ namespace TopEntertainment.Juegos.Application.Services
 {
     public interface IJuegosService
     {
-        List<JuegoDTO> GetAllJuegos();
+        List<JuegoDTO> GetAllJuegos(int? categoria = null, int? clasificacion = null, int? plataforma = null, string? descripcion = null);
         JuegoDTO GetJuegoById(int id);
         void Add(JuegoDTO2 juego);
         void Delete(int id);
@@ -52,9 +52,9 @@ namespace TopEntertainment.Juegos.Application.Services
             _repository.Delete(id);
         }
 
-        public List<JuegoDTO> GetAllJuegos()
+        public List<JuegoDTO> GetAllJuegos(int? categoria = null, int? clasificacion = null, int? plataforma = null, string? descripcion = null)
         {
-            var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetAllJuegos());
+            var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetAllJuegos(categoria, clasificacion, plataforma, descripcion));
             mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
             mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
             return mappedJuegos;

@@ -59,9 +59,13 @@ namespace TopEntertainment.Juegos.AccessData.Commands
             _context.SaveChanges();
         }
 
-        public List<Juego> GetAllJuegos()
+        public List<Juego> GetAllJuegos(int? categoria=null, int? clasificacion = null, int? plataforma = null, string? descripcion = null)
         {
-            return _context.Juegos.Where(juego => juego.SoftDelete == false).ToList();
+            return _context.Juegos.Where(juego => juego.SoftDelete == false &&
+                                          (clasificacion == null || juego.ClasificacionId == clasificacion.Value) &&
+                                          (plataforma == null || juego.PlataformaId == plataforma.Value) &&
+                                          (string.IsNullOrEmpty(descripcion) || juego.NombreProducto.Contains(descripcion))
+            ).ToList();
         }
 
         public Juego GetJuegoById(int id)

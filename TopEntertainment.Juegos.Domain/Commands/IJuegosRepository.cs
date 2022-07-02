@@ -7,7 +7,7 @@ namespace TopEntertainment.Juegos.Domain.Commands
         void Add(Juego juego, List<int> categorias, List<string> Imagenes);
         void Update(int id, Juego juego, List<int> categorias, List<string> Imagenes);
         void Delete(int id);
-        List<Juego> GetAllJuegos();
+        List<Juego> GetAllJuegos(int? categoria = null, int? clasificacion = null, int? plataforma = null, string? descripcion = null);
         Juego GetJuegoById(int id);
         List<int> GetCategoriasByJuegoId(int id);
         void AddCategoria(ProductoCategoria categoria);

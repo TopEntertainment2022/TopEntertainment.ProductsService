@@ -77,11 +77,11 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
 
 
         [HttpGet]
-        public IActionResult GetAllJuegos()
+        public IActionResult GetAllJuegos(int? categoria = null, int? clasificacion = null, int? plataforma = null, string? descripcion = null)
         {
             try
             {
-                return new JsonResult(_service.GetAllJuegos()) { StatusCode = 200 };
+                return new JsonResult(_service.GetAllJuegos(categoria, clasificacion,plataforma,descripcion)) { StatusCode = 200 };
             }
             catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
