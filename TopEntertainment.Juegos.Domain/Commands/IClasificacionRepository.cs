@@ -13,4 +13,9 @@ namespace TopEntertainment.Juegos.Domain.Commands
         public bool ClasificacionIsEmpty(int id);
 
     }
+
+    public interface ICategoriaRepository
+    {
+        List<Categoria> GetAllCategorias();
+    }
 }
