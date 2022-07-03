@@ -129,23 +129,30 @@ namespace TopEntertainment.Juegos.AccessData
                 new Categoria
                 {
                     CategoriaId = 1,
-                    NombreCategoria = "Platformer",
+                    NombreCategoria = "Accion",
                     Descripcion = "Juegos de plataforma y aventuras."
                 },
 
                 new Categoria
                 {
                     CategoriaId = 2,
-                    NombreCategoria = "FPS",
+                    NombreCategoria = "Aventura",
                     Descripcion = "Juegos de disparos."
                 },
 
                 new Categoria
                 {
                     CategoriaId = 3,
-                    NombreCategoria = "RPG",
+                    NombreCategoria = "Estrategia",
                     Descripcion = "Juegos de Rol y Estrategia."
-                }
+                },
+                               new Categoria
+                               {
+                                   CategoriaId = 4,
+                                   NombreCategoria = "Shootter",
+                                   Descripcion = "https://alfabetajuega.com/hero/2021/04/battlefield-bad-company-2.jpg?width=1200&aspect_ratio=1200:631"
+                               }
+
             );
 
             modelBuilder.Entity<Clasificacion>().HasData(
