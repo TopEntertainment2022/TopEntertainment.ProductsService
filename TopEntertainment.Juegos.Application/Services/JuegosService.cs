@@ -23,6 +23,8 @@ namespace TopEntertainment.Juegos.Application.Services
 
         public bool ValidarJuego(int id);
 
+        public List<JuegoDTO> GetOfertas(int top);
+
     }
     public class JuegosService : IJuegosService
     {
@@ -119,6 +121,14 @@ namespace TopEntertainment.Juegos.Application.Services
         public bool ValidarJuego(int id)
         {
             return _repository.ValidarJuego(id);
+        }
+
+        public List<JuegoDTO> GetOfertas(int top)
+        {
+            var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetOfertas(top));
+            mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
+            mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
+            return mappedJuegos;
         }
     }
 }

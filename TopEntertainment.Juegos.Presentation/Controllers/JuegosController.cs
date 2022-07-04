@@ -100,6 +100,16 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
+        [HttpGet("ofertas/{top}")]
+        public IActionResult GetOfertasd(int top)
+        {
+            try
+            {
+                return new JsonResult(_service.GetOfertas(top)) { StatusCode = 200 };
+            }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
+        }
+
         [HttpGet("plataforma/{id}")]
         public IActionResult GetJuegosByPlataformaId(int id)
         {

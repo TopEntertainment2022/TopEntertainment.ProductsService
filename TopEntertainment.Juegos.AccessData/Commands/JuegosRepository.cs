@@ -83,6 +83,11 @@ namespace TopEntertainment.Juegos.AccessData.Commands
             return _context.Juegos.Find(id);
         }
 
+        public List<Juego> GetOfertas(int top)
+        {
+            return _context.Juegos.Where(juego => juego.EnOferta == true).Take(top).ToList();
+        }
+
 
         public List<int> GetCategoriasByJuegoId(int id)
         {

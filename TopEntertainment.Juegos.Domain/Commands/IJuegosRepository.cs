@@ -4,6 +4,7 @@ namespace TopEntertainment.Juegos.Domain.Commands
 {
     public interface IJuegosRepository
     {
+        List<Juego> GetOfertas(int top);
         void Add(Juego juego, List<int> categorias, List<string> Imagenes);
         void Update(int id, Juego juego, List<int> categorias, List<string> Imagenes);
         void Delete(int id);
