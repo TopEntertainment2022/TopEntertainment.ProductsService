@@ -14,14 +14,14 @@ namespace TopEntertainment.Juegos.AccessData.Commands
         }
 
 
-       
+
 
         public List<Categoria> GetAllCategorias()
         {
             return _context.Categoria.ToList();
         }
 
-       
+
 
     }
 }

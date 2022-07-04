@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using TopEntertainment.Juegos.Domain.Commands;
-using TopEntertainment.Juegos.Domain.DTOS;
 using TopEntertainment.Juegos.Domain.Entities;
-using TopEntertainment.Juegos.Domain.Mapper;
 
 namespace TopEntertainment.Juegos.Application.Services
 {
@@ -29,7 +27,7 @@ namespace TopEntertainment.Juegos.Application.Services
 
         }
 
-     
+
     }
 
 }
