@@ -10,7 +10,7 @@ namespace TopEntertainment.Juegos.Domain.Commands
         void Delete(int id);
         List<Juego> GetAllJuegos(int? categoria = null, int? clasificacion = null, int? plataforma = null, string? descripcion = null, int? precioMinimo = null, int? precioMaximo = null);
         Juego GetJuegoById(int id);
-        List<int> GetCategoriasByJuegoId(int id);
+        List<Categoria> GetCategoriasByJuegoId(int id);
         void AddCategoria(ProductoCategoria categoria);
         void AddCategorias(int id, List<int> categorias);
         public void DeleteCategorias(int juegoID);

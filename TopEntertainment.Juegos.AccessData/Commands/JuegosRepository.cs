@@ -89,11 +89,19 @@ namespace TopEntertainment.Juegos.AccessData.Commands
         }
 
 
-        public List<int> GetCategoriasByJuegoId(int id)
+        //public List<int> GetCategoriasByJuegoId(int id)
+        //{
+        //    return _context.ProductoCategoria.
+        //                                     Where(productoCategoria => productoCategoria.JuegoId == id).
+        //                                     Select(productoCategoria => productoCategoria.CategoriaId).
+        //                                     ToList();
+        //}
+
+        public List<Categoria> GetCategoriasByJuegoId(int id)
         {
             return _context.ProductoCategoria.
                                              Where(productoCategoria => productoCategoria.JuegoId == id).
-                                             Select(productoCategoria => productoCategoria.CategoriaId).
+                                             Select(productoCategoria => productoCategoria.Categoria).
                                              ToList();
         }
 

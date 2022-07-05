@@ -5,6 +5,7 @@ namespace TopEntertainment.Juegos.Domain.Mapper
 {
     public class Mappers
     {
+
         public static Juego MapperJuego(Juego JuegoEntity, JuegoDTO juego)
         {
             JuegoEntity.NombreProducto = juego.NombreProducto;
@@ -12,10 +13,7 @@ namespace TopEntertainment.Juegos.Domain.Mapper
             JuegoEntity.Stock = juego.Stock;
             JuegoEntity.Descripcion = juego.Descripcion;
             JuegoEntity.EnOferta = juego.EnOferta;
-            //JuegoEntity.SoftDelete = juego.SoftDelete;
             JuegoEntity.Video = juego.Video;
-            JuegoEntity.PlataformaId = juego.PlataformaId;
-            JuegoEntity.ClasificacionId = juego.ClasificacionId;
             return JuegoEntity;
         }
 

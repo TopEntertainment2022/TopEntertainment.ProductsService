@@ -30,11 +30,15 @@ namespace TopEntertainment.Juegos.Application.Services
     {
         private readonly IJuegosRepository _repository;
         private readonly IMapper _mapper;
+        private readonly IPlataformaService _service;
+        private readonly IClasificacionService _service2;
 
-        public JuegosService(IJuegosRepository repository, IMapper mapper)
+        public JuegosService(IJuegosRepository repository, IMapper mapper, IPlataformaService service,IClasificacionService service2)
         {
             _repository = repository;
             _mapper = mapper;
+            _service = service;
+            _service2 = service2;
         }
 
         public void Add(JuegoDTO2 juego)
@@ -59,6 +63,7 @@ namespace TopEntertainment.Juegos.Application.Services
             var mappedJuegos = _mapper.Map<List<JuegoDTO>>(_repository.GetAllJuegos(categoria, clasificacion, plataforma, descripcion, precioMinimo, precioMaximo));
             mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
             mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
+            mappedJuegos.ForEach(juego => juego.Plataforma = _service.GetPlataformaById(_repository.GetJuegoById(juego.JuegoId).PlataformaId));
             return mappedJuegos;
         }
 
@@ -67,6 +72,8 @@ namespace TopEntertainment.Juegos.Application.Services
             var juegoDTO = _mapper.Map<JuegoDTO>(_repository.GetJuegoById(id));
             juegoDTO.Categorias = _repository.GetCategoriasByJuegoId(juegoDTO.JuegoId);
             juegoDTO.Imagenes = _repository.GetImagenesByJuegoId(juegoDTO.JuegoId);
+            juegoDTO.Plataforma = _service.GetPlataformaById(_repository.GetJuegoById(juegoDTO.JuegoId).PlataformaId);
+            juegoDTO.Clasificacion = _service2.GetClasificacionById(_repository.GetJuegoById(juegoDTO.JuegoId).PlataformaId);
             return juegoDTO;
         }
 
