@@ -73,7 +73,7 @@ namespace TopEntertainment.Juegos.Application.Services
             juegoDTO.Categorias = _repository.GetCategoriasByJuegoId(juegoDTO.JuegoId);
             juegoDTO.Imagenes = _repository.GetImagenesByJuegoId(juegoDTO.JuegoId);
             juegoDTO.Plataforma = _service.GetPlataformaById(_repository.GetJuegoById(juegoDTO.JuegoId).PlataformaId);
-            juegoDTO.Clasificacion = _service2.GetClasificacionById(_repository.GetJuegoById(juegoDTO.JuegoId).PlataformaId);
+            juegoDTO.Clasificacion = _service2.GetClasificacionById(_repository.GetJuegoById(juegoDTO.JuegoId).ClasificacionId);
             return juegoDTO;
         }
 

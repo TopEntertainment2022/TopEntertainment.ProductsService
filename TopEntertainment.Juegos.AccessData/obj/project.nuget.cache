@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JUgLPBFVKa/5Ao+kNWKqLK5L/hCIBbHQVSPdKsyLEtQqNQoSs47137ZOA75j7w9aeGc1KqIef/DnGBw4ojapaw==",
+  "dgSpecHash": "yPvuzCF3sagOivFpFi1Ile/0n7kU8g3mdjsuVzWLLZdV6O8uc0l8gZKq0yzVPshbMmOkFUJDzuu1mtBsdlsDcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj",
+  "projectFilePath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\usuario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

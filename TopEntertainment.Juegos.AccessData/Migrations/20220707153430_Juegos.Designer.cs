@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TopEntertainment.Juegos.AccessData;
 
@@ -10,9 +11,10 @@ using TopEntertainment.Juegos.AccessData;
 namespace TopEntertainment.Juegos.AccessData.Migrations
 {
     [DbContext(typeof(JuegosContext))]
-    partial class JuegosContextModelSnapshot : ModelSnapshot
+    [Migration("20220707153430_Juegos")]
+    partial class Juegos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

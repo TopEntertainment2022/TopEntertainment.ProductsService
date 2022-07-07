@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj": {}
+    "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj": {
+    "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj",
         "projectName": "TopEntertainment.Juegos.AccessData",
-        "projectPath": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\TopEntertainment.Juegos.AccessData.csproj",
         "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\obj\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.AccessData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
-                "projectPath": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj"
+              "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
+                "projectPath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
+    "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
         "projectName": "TopEntertainment.Juegos.Domain",
-        "projectPath": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
         "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\obj\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
