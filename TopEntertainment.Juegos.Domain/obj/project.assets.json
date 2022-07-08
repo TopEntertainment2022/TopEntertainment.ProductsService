@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\Rodrigo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
       "projectName": "TopEntertainment.Juegos.Domain",
-      "projectPath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
-      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuario\\Desktop\\Nueva carpeta (3)\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
+      "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
