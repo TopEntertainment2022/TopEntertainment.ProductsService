@@ -28,5 +28,9 @@ namespace TopEntertainment.Juegos.Domain.Commands
         public bool ValidarCategoria(int categoria);
 
         public bool ValidarJuego(int id);
+
+        bool stockMenos(int id);
+        bool stockMas(int id);
+        int hayStock(int id);
     }
 }

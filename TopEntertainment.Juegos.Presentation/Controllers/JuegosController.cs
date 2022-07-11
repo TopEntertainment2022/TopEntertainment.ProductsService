@@ -145,6 +145,44 @@ namespace TopEntertainment.Juegos.Presentation.Controllers
             catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
         }
 
+        [HttpPut("stockMenos/{id}")]
+
+        public IActionResult stockMenos(int id)
+        {
+            try
+            {
+                if (!_service.stockMenos(id)) return StatusCode(404, new RespuestaDTO("Operacion concretada correctamente "));
+                return new JsonResult(_service.GetJuegosByClasificacionId(id)) { StatusCode = 200 };
+            }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
+        }
+
+        [HttpPut("stockMas/{id}")]
+
+        public IActionResult stockMas(int id)
+        {
+            try
+            {
+                if (!_service.stockMas(id)) return StatusCode(404, new RespuestaDTO("Operacion concretada correctamente "));
+                return new JsonResult(_service.GetJuegosByClasificacionId(id)) { StatusCode = 200 };
+            }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
+        }
+
+        [HttpGet("hayStock/{id}")]
+
+        public IActionResult hayStock(int id)
+        {/*
+            try
+            {
+                if (!_service.hayStock(id)) return StatusCode(404, new RespuestaDTO("Operacion concretada correctamente "));
+                return new JsonResult(_service.GetJuegosByClasificacionId(id)) { StatusCode = 200 };
+            }
+            catch (Exception e) { return StatusCode(500, new RespuestaDTO(e.Message)); }
+            */
+            return new JsonResult(_service.hayStock(id));
+        }
+
 
     }
 

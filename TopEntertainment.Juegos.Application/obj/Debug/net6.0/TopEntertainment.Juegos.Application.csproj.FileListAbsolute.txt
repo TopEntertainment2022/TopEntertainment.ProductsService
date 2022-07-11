@@ -88,3 +88,18 @@ C:\Users\usuario\Desktop\Nueva carpeta (3)\TopEntertainment.ProductsService\TopE
 C:\Users\usuario\Desktop\Nueva carpeta (3)\TopEntertainment.ProductsService\TopEntertainment.Juegos.Application\obj\Debug\net6.0\refint\TopEntertainment.Juegos.Application.dll
 C:\Users\usuario\Desktop\Nueva carpeta (3)\TopEntertainment.ProductsService\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.pdb
 C:\Users\usuario\Desktop\Nueva carpeta (3)\TopEntertainment.ProductsService\TopEntertainment.Juegos.Application\obj\Debug\net6.0\ref\TopEntertainment.Juegos.Application.dll
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\bin\Debug\net6.0\TopEntertainment.Juegos.Application.deps.json
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\bin\Debug\net6.0\TopEntertainment.Juegos.Application.dll
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\bin\Debug\net6.0\TopEntertainment.Juegos.Application.pdb
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\bin\Debug\net6.0\TopEntertainment.Juegos.Domain.dll
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\bin\Debug\net6.0\TopEntertainment.Juegos.Domain.pdb
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.csproj.AssemblyReference.cache
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.AssemblyInfoInputs.cache
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.AssemblyInfo.cs
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.csproj.CopyComplete
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.dll
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\refint\TopEntertainment.Juegos.Application.dll
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\TopEntertainment.Juegos.Application.pdb
+C:\Users\Rodrigo\Desktop\Products\TopEntertainment.Juegos.Application\obj\Debug\net6.0\ref\TopEntertainment.Juegos.Application.dll

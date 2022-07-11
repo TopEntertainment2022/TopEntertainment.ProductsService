@@ -314,11 +314,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Rodrigo\\Desktop\\Products\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
       "projectName": "TopEntertainment.Juegos.Application",
-      "projectPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
+      "projectPath": "C:\\Users\\Rodrigo\\Desktop\\Products\\TopEntertainment.Juegos.Application\\TopEntertainment.Juegos.Application.csproj",
       "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Application\\obj\\",
+      "outputPath": "C:\\Users\\Rodrigo\\Desktop\\Products\\TopEntertainment.Juegos.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -339,8 +339,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
-              "projectPath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj"
+            "C:\\Users\\Rodrigo\\Desktop\\Products\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj": {
+              "projectPath": "C:\\Users\\Rodrigo\\Desktop\\Products\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj"
             }
           }
         }

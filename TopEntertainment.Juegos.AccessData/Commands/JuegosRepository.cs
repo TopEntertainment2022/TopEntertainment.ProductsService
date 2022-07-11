@@ -210,5 +210,44 @@ namespace TopEntertainment.Juegos.AccessData.Commands
             }
             else return true;
         }
+
+
+        public bool stockMenos(int id)
+        {
+            try
+            {
+                Juego juego = GetJuegoById(id);
+                juego.Stock--;
+                _context.Update(juego);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public int hayStock(int id)
+        {
+
+            Juego juego = GetJuegoById(id);
+            return juego.Stock;
+        }
+
+        public bool stockMas(int id)
+        {
+            try
+            {
+                Juego juego = GetJuegoById(id);
+                juego.Stock++;
+                _context.Update(juego);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -24,6 +24,9 @@ namespace TopEntertainment.Juegos.Application.Services
         public bool ValidarJuego(int id);
 
         public List<JuegoDTO> GetOfertas(int top);
+        bool stockMenos(int id);
+        bool stockMas(int id);
+        bool hayStock(int id);
 
     }
     public class JuegosService : IJuegosService
@@ -136,6 +139,30 @@ namespace TopEntertainment.Juegos.Application.Services
             mappedJuegos.ForEach(juego => juego.Categorias = _repository.GetCategoriasByJuegoId(juego.JuegoId));
             mappedJuegos.ForEach(juego => juego.Imagenes = _repository.GetImagenesByJuegoId(juego.JuegoId));
             return mappedJuegos;
+        }
+
+        public bool hayStock(int id)
+        {
+            if (_repository.hayStock(id) == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool stockMenos(int id)
+        {
+            return _repository.stockMenos(id);
+
+        }
+
+        public bool stockMas(int id)
+        {
+            return _repository.stockMas(id);
+
         }
     }
 }

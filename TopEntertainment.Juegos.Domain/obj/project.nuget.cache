@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MYcH6mXqlUhxOhmjCTd3CDjrskRaXeHnBKBmzkEkhC5G85U2vaf5IS1OObQH/hSkdjjKgoeWxQtkFXP1uwskiA==",
+  "dgSpecHash": "YwOlFNr1ZDupKI5YkHQfHoZfMrt5rHDCRgogN2qn13Jdh4JAA5suXvaILMueLUKU0nV/r8vEKOH3T6obwkAG+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rodrigo\\Desktop\\TopEntertainment.ProductsService\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Rodrigo\\Desktop\\Products\\TopEntertainment.Juegos.Domain\\TopEntertainment.Juegos.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
